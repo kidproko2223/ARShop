@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "425727127339",
+    "project_id": "arshop-bc9ce",
+    "storage_bucket": "arshop-bc9ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:425727127339:android:bc7d4fe8fadce012181f6e",
+        "android_client_info": {
+          "package_name": "com.example.arshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "425727127339-3kb37hjusekjngafsrt8hdan09p3426k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.arshop",
+            "certificate_hash": "95496e6902a2695002e274f4efd942031d29bf55"
+          }
+        },
+        {
+          "client_id": "425727127339-gngj1bqnnheentd7gsu9hc12euaq0dio.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFRV3eH5cYf1xzX0fFBs5yMXx9VcvETx0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "425727127339-gngj1bqnnheentd7gsu9hc12euaq0dio.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
