@@ -1,10 +1,5 @@
 package com.example.arshop;
 
-<<<<<<< HEAD
-import android.net.Uri;
-import android.os.Bundle;
-import android.view.MotionEvent;
-=======
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
@@ -14,7 +9,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.Toast;
->>>>>>> New Final Project
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,21 +31,13 @@ public class TryProductActivity extends AppCompatActivity {
     private String category, name;
     private Session arSesson;
     private Config arConfig;
-<<<<<<< HEAD
-
-=======
     private static final double MIN_OPENGL_VERSION = 3.0;
->>>>>>> New Final Project
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_try_product);
-<<<<<<< HEAD
-
-=======
         arFragment = (ArFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.ar_fragment);
->>>>>>> New Final Project
 
         category = getIntent().getStringExtra("category");
         name = getIntent().getStringExtra("name");
@@ -86,25 +72,6 @@ public class TryProductActivity extends AppCompatActivity {
         } else if (name.equals("Wall Painting")) {
             object = Uri.parse("WallPainting_01.sfb");
 
-<<<<<<< HEAD
-        } else if (name.equals("Sneaker")){
-            object = Uri.parse("sneaker.sfb");
-        }
-
-
-        arFragment = (ArFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.ar_fragment);
-
-        arFragment.setOnTapArPlaneListener(new BaseArFragment.OnTapArPlaneListener() {
-            @Override
-            public void onTapPlane(HitResult hitResult, Plane plane, MotionEvent motionEvent) {
-
-                Anchor anchor = hitResult.createAnchor();
-
-                placeObject(arFragment, anchor, object);
-            }
-        });
-=======
         } else if (name.equals("Sneaker")) {
             object = Uri.parse("sneaker.sfb");
         }
@@ -120,7 +87,6 @@ public class TryProductActivity extends AppCompatActivity {
             });
         }
 
->>>>>>> New Final Project
 
     }
 
@@ -145,16 +111,6 @@ public class TryProductActivity extends AppCompatActivity {
         TransformableNode transformableNode = new TransformableNode(
                 arFragment.getTransformationSystem());
 
-<<<<<<< HEAD
-            //transformableNode.getScaleController().setMaxScale(0.09f);
-            transformableNode.getScaleController().setMinScale(0.05f);
-
-            transformableNode.setRenderable(renderable);
-            transformableNode.setParent(anchorNode);
-            arFragment.getArSceneView().getScene().addChild(anchorNode);
-            transformableNode.select();
-
-=======
         //transformableNode.getScaleController().setMaxScale(0.09f);
         transformableNode.getScaleController().setMinScale(0.05f);
 
@@ -184,6 +140,5 @@ public class TryProductActivity extends AppCompatActivity {
             return false;
         }
         return true;
->>>>>>> New Final Project
     }
 }

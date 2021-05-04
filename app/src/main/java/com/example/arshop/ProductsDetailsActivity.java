@@ -1,12 +1,8 @@
 package com.example.arshop;
 
-<<<<<<< HEAD
-import android.content.Intent;
-=======
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
->>>>>>> New Final Project
 import android.os.Build;
 import android.os.Bundle;
 
@@ -47,16 +43,10 @@ public class ProductsDetailsActivity extends AppCompatActivity {
     private TextView quantityNumText, pDescPriceText, pDescNameText, pDescText, pDescRatingText, pDescWarantyText, pLocationText, totalPriceText;
     private DatabaseReference dbref;
     private String pID, pDesc, pPrice, pRatings, pName, pWarranty, pImg, pLocation,
-<<<<<<< HEAD
-            userPhoneKey,pCategory;
-    private FloatingActionButton gotoCartFAB;
-    private int quantity = 1, totalPrice = 1;
-=======
             userPhoneKey, pCategory;
     private FloatingActionButton gotoCartFAB;
     private int quantity = 1, totalPrice = 1;
     private int MY_CAMERA_REQUEST_CODE = 999;
->>>>>>> New Final Project
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,11 +65,7 @@ public class ProductsDetailsActivity extends AppCompatActivity {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window w = getWindow();
-<<<<<<< HEAD
-            w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-=======
             w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
->>>>>>> New Final Project
         }
 
         gotoCartFAB = findViewById(R.id.goto_cart_fab);
@@ -136,11 +122,7 @@ public class ProductsDetailsActivity extends AppCompatActivity {
                 pCategory = dataSnapshot.child(pID).child("category").getValue().toString();
 
 
-<<<<<<< HEAD
-                totalPrice= Integer.parseInt(pPrice);
-=======
                 totalPrice = Integer.parseInt(pPrice);
->>>>>>> New Final Project
 
                 if (dataSnapshot.child(pID).child("location").exists()) {
                     pLocation = dataSnapshot.child(pID).child("location").getValue().toString();
@@ -169,12 +151,6 @@ public class ProductsDetailsActivity extends AppCompatActivity {
         tryProductBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-<<<<<<< HEAD
-                Intent tryProduct = new Intent(ProductsDetailsActivity.this, TryProductActivity.class);
-                tryProduct.putExtra("category",pCategory);
-                tryProduct.putExtra("name",pName);
-                startActivity(tryProduct);
-=======
                 if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                     requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_REQUEST_CODE);
                 } else {
@@ -183,7 +159,6 @@ public class ProductsDetailsActivity extends AppCompatActivity {
                     tryProduct.putExtra("name", pName);
                     startActivity(tryProduct);
                 }
->>>>>>> New Final Project
 
             }
         });
@@ -284,9 +259,6 @@ public class ProductsDetailsActivity extends AppCompatActivity {
         Picasso.get().load(pImg).into(productDescImg);
     }
 
-<<<<<<< HEAD
-
-=======
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -301,5 +273,4 @@ public class ProductsDetailsActivity extends AppCompatActivity {
             }
         }
     }
->>>>>>> New Final Project
 }

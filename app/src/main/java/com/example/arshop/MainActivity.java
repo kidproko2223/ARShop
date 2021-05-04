@@ -70,11 +70,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         viewFlipper=findViewById(R.id.view_flipper);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window w = getWindow();
-<<<<<<< HEAD
-            w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-=======
             w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
->>>>>>> New Final Project
         }
 
         recyclerView=findViewById(R.id.new_products_rv);
@@ -174,7 +170,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                             Picasso.get().load(img).into(userImg);
                         }
                         if (dataSnapshot.child(userPhoneKey).child("name").exists()
-                        && dataSnapshot.child(userPhoneKey).child("phone").exists()) {
+                                && dataSnapshot.child(userPhoneKey).child("phone").exists()) {
                             String name = dataSnapshot.child(userPhoneKey).child("name").getValue().toString();
                             String phone = dataSnapshot.child(userPhoneKey).child("phone").getValue().toString();
 
