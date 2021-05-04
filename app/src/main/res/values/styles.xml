@@ -11,8 +11,11 @@
     </style>
 
     <style name="AppTheme.NoActionBar">
+<<<<<<< HEAD
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+=======
+>>>>>>> New Final Project
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

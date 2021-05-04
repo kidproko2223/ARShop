@@ -70,7 +70,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         viewFlipper=findViewById(R.id.view_flipper);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window w = getWindow();
+<<<<<<< HEAD
             w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+=======
+            w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+>>>>>>> New Final Project
         }
 
         recyclerView=findViewById(R.id.new_products_rv);
